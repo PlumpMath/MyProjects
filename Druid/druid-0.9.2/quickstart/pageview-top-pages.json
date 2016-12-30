@@ -1,0 +1,16 @@
+{
+  "queryType" : "topN",
+  "dataSource" : "pageviews",
+  "intervals" : ["2016-12-30/2017-01-01"],
+  "granularity" : "all",
+  "dimension" : "url",
+  "metric" : "latencyMs",
+  "threshold" : 25,
+  "aggregations" : [
+    {
+      "type" : "longSum",
+      "name" : "latencyMs",
+      "fieldName" : "latencyMs"
+    }
+  ]
+}

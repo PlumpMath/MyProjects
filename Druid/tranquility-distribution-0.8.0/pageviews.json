@@ -1,0 +1,3 @@
+{"timestamp": "2016-12-30T17:40:09Z", "url": "/foo/bar", "user": "alice", "latencyMs": 32}
+{"timestamp": "2016-12-30T17:40:09Z", "url": "/", "user": "bob", "latencyMs": 11}
+{"timestamp": "2016-12-30T17:40:09Z", "url": "/foo/bar", "user": "bob", "latencyMs": 45}

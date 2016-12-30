@@ -1,9 +1,9 @@
 {
   "dataSources" : {
-    "metrics" : {
+    "pageviews" : {
       "spec" : {
         "dataSchema" : {
-          "dataSource" : "metrics",
+          "dataSource" : "pageviews",
           "parser" : {
             "type" : "string",
             "parseSpec" : {
@@ -12,7 +12,7 @@
                 "format" : "auto"
               },
               "dimensionsSpec" : {
-                "dimensions" : [],
+                "dimensions": ["url", "user"],
                 "dimensionExclusions" : [
                   "timestamp",
                   "value"
@@ -27,25 +27,8 @@
             "queryGranularity" : "none"
           },
           "metricsSpec" : [
-            {
-              "type" : "count",
-              "name" : "count"
-            },
-            {
-              "name" : "value_sum",
-              "type" : "doubleSum",
-              "fieldName" : "value"
-            },
-            {
-              "fieldName" : "value",
-              "name" : "value_min",
-              "type" : "doubleMin"
-            },
-            {
-              "type" : "doubleMax",
-              "name" : "value_max",
-              "fieldName" : "value"
-            }
+            {"name": "views", "type": "count"},
+            {"name": "latencyMs", "type": "doubleSum", "fieldName": "latencyMs"}
           ]
         },
         "ioConfig" : {
